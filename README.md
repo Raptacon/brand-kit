@@ -2,9 +2,9 @@
 
 Brand assets for FRC Team 3200 (Raptacon Robotics): logo, wordmark, brand color, and
 fonts. This repo is meant to be pulled into other Raptacon repos as a git submodule
-(e.g. the recruitment flyer references `brand-kit/logo/mark.png` and
+(e.g. the recruitment flyer references `brand-kit/logo/raptor-mark.png` and
 `brand-kit/fonts/ethnocentric/…` directly) — keep that in mind before renaming or
-moving files, since paths here are load-bearing elsewhere.
+moving files, since paths here are used elsewhere.
 
 ## Brand color
 
@@ -21,11 +21,11 @@ moving files, since paths here are load-bearing elsewhere.
 ```
 brand-kit/
   logo/
-    mark.svg                bird mark only (no text)
-    mark.png                bird mark, rasterized, transparent background
-    lockup-horizontal.svg   bird mark + "RAPTACON 3200" side by side
+    raptor-mark.svg         raptor mark only (no text)
+    raptor-mark.png         raptor mark, rasterized, transparent background
+    lockup-horizontal.svg   raptor mark + "RAPTACON 3200" side by side
     lockup-horizontal.png   transparent background
-    lockup-square.svg       bird mark + "RAPTACON 3200" stacked, square canvas
+    lockup-square.svg       raptor mark + "RAPTACON 3200" stacked, square canvas
     lockup-square.png       transparent background
   fonts/
     raptacon.sfd            custom "Raptacon" display font — editable source
@@ -70,7 +70,7 @@ git submodule update --init --recursive   # after cloning a repo that already ha
 ```
 
 Then reference files by their path inside the submodule, e.g. in LaTeX:
-`\includegraphics{brand-kit/logo/mark.png}`, or load
+`\includegraphics{brand-kit/logo/raptor-mark.png}`, or load
 `brand-kit/fonts/ethnocentric/Ethnocentric-Regular.otf` directly via `fontspec`'s
 `Path=` option — no need to install the font on the build machine.
 
@@ -78,13 +78,13 @@ Then reference files by their path inside the submodule, e.g. in LaTeX:
 
 Every logo SVG is hand-authored and editable directly in Inkscape (or any SVG editor).
 
-- `mark.svg` — the bird mark. One `<g>` of straight-line/arc `<path>`s. Left/right
+- `raptor-mark.svg` — the raptor mark. One `<g>` of straight-line/arc `<path>`s. Left/right
   mirror-symmetric except the intentionally turned head.
 - `lockup-horizontal.svg` / `lockup-square.svg` — composited lockups. Each is a
   top-level SVG containing two nested `<svg x="…" y="…" width="…" height="…"
-  viewBox="…">` blocks, one holding the bird mark's paths and one holding the
+  viewBox="…">` blocks, one holding the raptor mark's paths and one holding the
   wordmark's paths (see "Modifying the font" below for where the wordmark paths come
-  from). To change the gap/overlap between the bird and the text, or their relative
+  from). To change the gap/overlap between the raptor and the text, or their relative
   sizes, adjust the `x`/`y`/`width`/`height` on those two nested `<svg>` elements —
   the artwork inside doesn't need to change.
 
@@ -134,7 +134,7 @@ brew install --cask inkscape
 
 ## License
 
-- **Bird mark, wordmark, and the custom "Raptacon" font**: original work for Team
+- **Raptor mark, wordmark, and the custom "Raptacon" font**: original work for Team
   3200, free to use and modify for team purposes.
 - **Ethnocentric** (`fonts/ethnocentric/Ethnocentric-Regular.otf`, by Typodermic
   Fonts / Ray Larabie): free for personal and commercial use in **static, fixed**
