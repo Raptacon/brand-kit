@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="23.0"
+   height="15.0"
+   viewBox="0 0 23.0 15.0"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="A.svg"
+   inkscape:version="1.4.4 (dcaf3e7d, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.9324351"
+     inkscape:cx="11.539957"
+     inkscape:cy="10.169587"
+     inkscape:window-width="1235"
+     inkscape:window-height="626"
+     inkscape:window-x="4314"
+     inkscape:window-y="307"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Raptacon A</title>
+  <path
+     d="m 11.545,0 h 1.3 L 23,15 H 7.14 l 2.78,-4 h 5.15 L 11.869,6.153 5.06,15 H 0 Z"
+     fill="#000000"
+     id="path1" />
+</svg>
