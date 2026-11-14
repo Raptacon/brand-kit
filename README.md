@@ -27,6 +27,10 @@ brand-kit/
     lockup-horizontal.png   transparent background
     lockup-square.svg       raptor mark + "RAPTACON 3200" stacked, square canvas
     lockup-square.png       transparent background
+    *-dark.svg / *-dark.png same three logos in white (#FFFFFF), for dark backgrounds
+                             (raptor-mark-dark, lockup-horizontal-dark, lockup-square-dark)
+    *-auto.svg              same three logos, black or white depending on the
+                             viewer's light/dark setting (prefers-color-scheme)
   fonts/
     raptacon.sfd            custom "Raptacon" display font — editable source
     raptacon.ttf            custom "Raptacon" display font — installable
@@ -38,10 +42,41 @@ brand-kit/
 ```
 
 All logo SVGs are pure vector: straight lines and true circular arcs only, no traced
-bitmap noise, no embedded fonts or raster images. They're black-filled (`#000000`) by
-design so they drop onto any background — recolor the `fill` attribute (e.g. to
-`#84EC5C`) for a colored version, or drop them onto a solid brand-green background for
-the reversed look.
+bitmap noise, no embedded fonts or raster images. The originals are black-filled (`#000000`) for light
+backgrounds; the `-dark` versions are white for dark ones (see below). Recolor the `fill`
+attribute (e.g. to `#84EC5C`) for a colored version, or drop them onto a solid
+brand-green background for the reversed look.
+
+## Light and dark backgrounds
+
+The base files are black ink for light backgrounds. Each has a `-dark` twin with the
+same geometry and pixel size, filled white (`#FFFFFF`), for dark backgrounds such as
+`#0f1720` or `#1b2430`. Raptacon Green (`#84EC5C`) also reads well on those (contrast
+12:1 on `#0f1720`) if you recolor a logo green.
+
+To follow the device setting in HTML:
+
+```html
+<picture>
+  <source srcset="brand-kit/logo/lockup-horizontal-dark.svg"
+          media="(prefers-color-scheme: dark)">
+  <img src="brand-kit/logo/lockup-horizontal.svg" alt="Raptacon 3200">
+</picture>
+```
+
+`logo/*-auto.svg` does the same switch inside one file (an embedded `<style>` with
+`@media (prefers-color-scheme: dark)`), so a plain `<img src="…-auto.svg">` works.
+
+Both of these follow the OS/browser setting only. A site with its own manual theme
+toggle should pick the file from its theme state instead, e.g. switch the `<img>`
+`src` between the base and `-dark` file, or render both and hide one with CSS keyed
+on the theme attribute:
+
+```css
+.logo-dark { display: none; }
+[data-theme="dark"] .logo-light { display: none; }
+[data-theme="dark"] .logo-dark { display: inline; }
+```
 
 ## Using the assets
 
